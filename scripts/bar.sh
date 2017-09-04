@@ -68,8 +68,8 @@ sound() {
 }
 
 battery() {
-    percent=$(cat /sys/class/power_supply/BAT0/capacity)
-    power=$(cat /sys/class/power_supply/BAT0/status)
+    percent=$(cat /sys/class/power_supply/sbs-104-000b/capacity)
+    power=$(cat /sys/class/power_supply/sbs-104-000b/status)
 	
 	if [[ $power == "Charging" || $power == "Unknown" ]]; then
 		echo -n " $percent%"
